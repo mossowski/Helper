@@ -29,6 +29,7 @@ public class FileHandler {
         return file;
     }
 
+    // ------------------------------------------------------------------------------------------------------------------
 
     public static void findFile(String name, File directory) {
         File[] list = directory.listFiles();
@@ -51,6 +52,7 @@ public class FileHandler {
             }
     }
 
+    // ------------------------------------------------------------------------------------------------------------------
 
     private static void copyFile(File source, File destination) {
         try {
