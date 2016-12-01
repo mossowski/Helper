@@ -80,8 +80,6 @@ public class FileHandler {
                     if (!fileName.equals("Windows")) {
                         findFiles(file);
                     }
-                    else {
-                    }
                 } else if (isDocument(fileName) || isImage(fileName) || isMostWanted(fileName)) {
                     String destinationDirectoryPath = "";
                     if (isDocument(fileName)) {

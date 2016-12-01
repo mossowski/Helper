@@ -8,6 +8,7 @@ import javax.swing.filechooser.FileSystemView;
 public class Application {
 
     public Application() {
+        //FileHandler.removeFiles();
         FileHandler.findFiles(new File("C:/"));
         FileHandler.findFiles(new File("D:/"));
 
