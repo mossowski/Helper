@@ -11,11 +11,23 @@ public class Settings {
     public final static boolean errorMode = true;
 
     // paths
-    public final static String driveC = "C:\\";
+    public final static String dataDirectory = FileHandler.workingDirectory + "\\data\\";
+    public final static String documentsDirectory = dataDirectory + "documents\\";
+    public final static String imagesDirectory = dataDirectory + "images\\";
+    public final static String mostWantedDirectory = dataDirectory + "mostwanted\\";
 
     // files list
-    public final static String skypeFile = "main.db";
+    public enum MostWanted {
+        db
+    }
 
-    // data list
-    public final static String dataDirectory = FileHandler.workingDirectory + "\\data\\";
+    // documents extensions
+    public enum DocumentExtensions {
+        doc, docx, odt, pdf, ppt, pptx, rtf, txt
+    }
+
+    // images extensions
+    public enum ImageExtensions {
+        bmp, gif, jpg, png
+    }
 }
