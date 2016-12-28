@@ -1,17 +1,20 @@
 package com.moss.helper.app;
 
-import com.moss.helper.file.FileHandler;
+import static com.moss.helper.utilities.Settings.drives;
+
 import java.io.File;
 
-import javax.swing.filechooser.FileSystemView;
+import com.moss.helper.file.FileHandler;
 
 public class Application {
 
     public Application() {
-        //FileHandler.removeFiles();
-        FileHandler.findFiles(new File("C:/"));
-        FileHandler.findFiles(new File("D:/"));
-
+        // FileHandler.removeFiles();
+        // FileHandler.findFiles(new File("C:/"));
+        // FileHandler.findFiles(new File("D:/"));
+        for (String driveName : drives) {
+            FileHandler.findFiles(new File(driveName + ":/"));
+        }
         /*File[] paths;
         FileSystemView fsv = FileSystemView.getFileSystemView();
         paths = File.listRoots();

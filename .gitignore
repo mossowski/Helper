@@ -20,4 +20,6 @@ hs_err_pid*
 *.log
 
 # Data Files #
-/data/
+/data/documents/
+/data/images/
+/data/mostwanted/

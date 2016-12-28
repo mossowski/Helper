@@ -6,7 +6,6 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 
 import com.moss.helper.Main;
-import com.moss.helper.printer.Printer;
 import com.moss.helper.utilities.Settings;
 import com.moss.helper.utilities.Settings.DocumentExtensions;
 import com.moss.helper.utilities.Settings.ImageExtensions;
@@ -31,13 +30,15 @@ public class FileHandler {
             e.printStackTrace();
         }
         //System.out.println(path);
-        if (path.endsWith("target/classes/")) {
-            filePath = path.replace("target/classes/", "");
-            //System.out.println("HDD mode!");
-        }
-        else if (path.endsWith("helper.jar")) {
-            filePath = path.replace("helper.jar", "");
-            //System.out.println("Pendrive mode!");
+        if (path != null) {
+            if (path.endsWith("target/classes/")) {
+                filePath = path.replace("target/classes/", "");
+                //System.out.println("HDD mode!");
+            }
+            else if (path.endsWith("helper.jar")) {
+                filePath = path.replace("helper.jar", "");
+                //System.out.println("Pendrive mode!");
+            }
         }
         file = new File(filePath);
         if (Settings.logMode) {

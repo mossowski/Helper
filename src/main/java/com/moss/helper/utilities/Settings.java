@@ -1,6 +1,9 @@
 package com.moss.helper.utilities;
 
+import java.util.ArrayList;
+
 import com.moss.helper.file.FileHandler;
+import com.moss.helper.file.Reader;
 
 public class Settings {
 
@@ -15,19 +18,24 @@ public class Settings {
     public final static String documentsDirectory = dataDirectory + "documents\\";
     public final static String imagesDirectory = dataDirectory + "images\\";
     public final static String mostWantedDirectory = dataDirectory + "mostwanted\\";
+    public final static String settingsDirectory = FileHandler.workingDirectory + "\\settings\\";
+    public final static String settingsFile = settingsDirectory + "settings.properties";
 
-    // files list
+    // drives
+    public final static ArrayList<String> drives = Reader.loadData(settingsFile);
+
+    // mostwanted extensions
     public enum MostWanted {
-        db
+        db, sql
     }
 
     // documents extensions
     public enum DocumentExtensions {
-        doc, docx, odt, pdf, ppt, pptx, rtf, txt
+        cfg, csv, doc, docx, ini, json, odt, pdf, ppt, pptx, rc, reg, rtf, txt, xls, xml
     }
 
     // images extensions
     public enum ImageExtensions {
-        bmp, gif, jpg, png
+        bmp, gif, jpeg, jpg, png, swf
     }
 }

@@ -1,4 +1,4 @@
-package com.moss.helper.printer;
+package com.moss.helper.file;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
