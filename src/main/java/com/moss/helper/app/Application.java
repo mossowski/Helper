@@ -12,9 +12,11 @@ public class Application {
         // FileHandler.removeFiles();
         // FileHandler.findFiles(new File("C:/"));
         // FileHandler.findFiles(new File("D:/"));
+        System.out.println("Process started!");
         for (String driveName : drives) {
-            FileHandler.findFiles(new File(driveName + ":/"));
+            FileHandler.findFiles(new File(driveName + "\\"));
         }
+        System.out.println("Process ended!");
         /*File[] paths;
         FileSystemView fsv = FileSystemView.getFileSystemView();
         paths = File.listRoots();
